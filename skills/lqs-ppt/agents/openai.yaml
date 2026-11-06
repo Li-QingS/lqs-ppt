@@ -1,0 +1,4 @@
+interface:
+  display_name: "LQS 科研 PPT"
+  short_description: "按个人学术汇报习惯组织论文与平台展示，制作整页图片、科研配图和可编辑复刻"
+  default_prompt: "使用 $lqs-ppt，结合我的原始材料和已有学术风格，按本次要求完成科研 PPT 的框架、页面或配图。"
