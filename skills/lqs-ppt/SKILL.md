@@ -36,7 +36,7 @@ description: Use when preparing or revising Chinese research presentations, full
 
 整页 PNG、独立配图、框架讨论及已有 PPT 的局部修改不额外触发此问题，除非本次要求实际涉及可编辑重建。这个选择只决定由谁完成复刻，不增加其他制作阶段的审批。
 
-制作整页图片、配图或可编辑文件前，读取 [制作与验收](references/production-and-qa.md)。处理 GMI、有限配置库或波形平台时，再读取 [项目专用约束](references/project-context.md)。仅核查历史规则来源时读取 [来源索引](references/source-ledger.md)；使用录音意见、写研究现状或设计引用时读取 [文案与引用](references/writing-and-citations.md)。
+制作整页图片、配图或可编辑文件前，读取 [制作与验收](references/production-and-qa.md)。准备实际生图或合成任务时，按 [提示词模板](references/prompt-templates.md) 选用并填写对应模板；制作前与交付前执行 [checklist](references/checklist.md) 的共用及适用分支，只有实际验证通过才能勾选。处理 GMI、有限配置库或波形平台时，再读取 [项目专用约束](references/project-context.md)。仅核查历史规则来源时读取 [来源索引](references/source-ledger.md)；使用录音意见、写研究现状或设计引用时读取 [文案与引用](references/writing-and-citations.md)。
 
 ## 制作流程
 
@@ -78,11 +78,13 @@ description: Use when preparing or revising Chinese research presentations, full
 
 **概念示意图**允许使用图像生成模型增强直观性；**科学证据图**必须保留原图，或由真实数据可追溯地重绘。不能让生图模型重新解释真实曲线、实验数值、截图或精确公式。整页图片同样遵守这条边界：可把原始证据与核对过的文字确定性合成到最终页面。
 
+实际制作不能只复述风格要求。先填写 [模板A–E](references/prompt-templates.md)：整页概念图、独立素材、概念插画局部编辑使用对应生图模板；成果证据合成与可编辑复刻使用对应制作任务书。写明图像角色、主旨、准确文字、版式、关系、保留项与输出意图，再删除不适用行；发给工具的内容不留未填写字段。已有信息自行提取，不把填模板变成逐项询问用户。需要实例时参考模板文件中的完整示例。
+
 按 [制作与验收](references/production-and-qa.md) 执行所选输出分支。当前环境有相应技能时，图像生成读取 `imagegen`，PPTX 文件制作读取 `presentations:Presentations`；本 skill 不规定旧模型名称、API key 或固定软件库。环境未提供同名技能时，使用可用的图像生成或演示文稿工具执行同等流程；工具缺失不能降低证据保真与可编辑性要求。用户指定工具时先核实可用性，不能声称使用了实际未调用的工具。
 
 ### 6. 验收后交付
 
-独立检查内容与视觉。内容检查覆盖术语、公式、曲线图例、数字、单位、引用、结论适用条件和页面分工；视觉检查打开实际最终图片或渲染文件，检查版心、字体、疏密、边界、遮挡和图文对应。修复后重新检查受影响页面。
+用 [checklist](references/checklist.md) 逐页或逐素材记录准备、制作和交付状态。独立检查内容与视觉：内容覆盖术语、公式、曲线图例、数字、单位、引用、结论适用条件和页面分工；视觉检查实际最终图片或渲染文件的版心、字体、疏密、边界、遮挡和图文对应。未检查、失败、不适用分别记录，不能用清单写了要求代替检查结果。修复后重新检查受影响页面。
 
 可编辑文件额外检查包结构、对象编辑能力及重新保存后的渲染。局部编辑核对保护区域；真实截图标注核对原图和未标注区域。文件可打开或自动检查通过，不代表科学内容或视觉已合格。
 

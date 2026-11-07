@@ -25,7 +25,7 @@ https://github.com/Li-QingS/lqs-ppt/tree/main/skills/lqs-ppt
 使用 $lqs-ppt，沿用这份参考页的学术风格，生成下一页的完整图片，只交PNG。
 ```
 
-如果接收者的客户端没有 `$skill-installer`，让其按自身客户端的技能安装入口安装 `skills/lqs-ppt` 目录。不要只复制 `SKILL.md`，四份 `references/` 文件也需要保留。
+如果接收者的客户端没有 `$skill-installer`，让其按自身客户端的技能安装入口安装 `skills/lqs-ppt` 目录。不要只复制 `SKILL.md`，完整的 `references/` 文件夹也需要保留。
 
 ## 下载包方式
 
@@ -43,6 +43,13 @@ https://github.com/Li-QingS/lqs-ppt/tree/main/skills/lqs-ppt
 
 默认科研风格源于 LQS 的制作习惯，当前使用者的要求与模板优先。波形平台及 GMI 内容只在相关任务中按需读取。
 
+## 提示词模板与 Checklist
+
+- [提示词模板](skills/lqs-ppt/references/prompt-templates.md)：整页概念页、独立科研配图和概念图局部编辑的生图模板，以及科学证据合成、可编辑复刻的制作任务书；另附完整填写示例。
+- [制作与交付 Checklist](skills/lqs-ppt/references/checklist.md)：可复制的任务记录、共用检查和整页、透明素材、证据、局部修改、自己/agent复刻、批量分支，区分通过、失败、未检查及不适用。
+
+实际制作先填好相应模板，再检查最终文件；提示词写了透明或可编辑，不等于产物已合格。原始实验曲线、截图和精确公式使用原件或受控合成，不交给生图模型重新解释。清单是工作记录，按用户需要交付，不嵌入演示页面。
+
 ## 仓库内容
 
 ```text
@@ -52,6 +59,8 @@ skills/
     ├── SKILL.md
     ├── agents/openai.yaml
     └── references/
+        ├── prompt-templates.md
+        ├── checklist.md
         ├── production-and-qa.md
         ├── project-context.md
         ├── source-ledger.md
